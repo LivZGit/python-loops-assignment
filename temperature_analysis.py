@@ -19,7 +19,7 @@ def MaxMinTemp():
     print(f"Maximum Temperature : {max_temp}°C")
     print(f"Minimum Temperature : {min_temp}°C")
 
-#MaxMinTemp()
+MaxMinTemp()
 
 def CountHotDays():
     print("\n===== Task 2: Count Hot Days =====\n")
@@ -38,8 +38,23 @@ def CountHotDays():
     
 CountHotDays()
 
-"""
-print("\n===== Task 3: Alert System =====")
-temperatures = [28, 32, 35, 40, 31, 33, 30]
-# Write your code here
-"""
+def AlertSystem():
+    print("\n===== Task 3: Alert System =====\n")
+
+    temperatures = [28, 32, 35, 40, 31, 33, 30]
+    
+    hot_days = 0
+
+    for day, temp in enumerate(temperatures, start=1):
+        if(temp >= 40):
+            print(f"Hot Days before alert: {hot_days}")
+            print(f"Alert! Extreme temperature {temp}°C detected on Day {day}")
+            break
+
+        if(temp > 30):
+            hot_days += 1
+
+AlertSystem()
+            
+
+
